@@ -1,0 +1,47 @@
+.HeaderSection {
+  color: white;
+}
+
+.HeaderSection .mask {
+  height: 180px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.698864) 0%,
+    rgba(0, 0, 0, 0.0001) 100%
+  );
+}
+
+.HeaderSection .mask .maskContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.HeaderSection .mask .logo {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 43px;
+  margin-top: 52px;
+  margin-bottom: 85px;
+}
+
+.HeaderSection .mask .navigation {
+  margin-top: 52px;
+  margin-bottom: 85px;
+  display: flex;
+}
+
+.HeaderSection .mask .navigation .navbar a {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 43px;
+  color: white;
+  text-decoration: none;
+  margin-right: 18px;
+}
+
+.HeaderSection .mask .navigation .search {
+  margin-left: 18px;
+}

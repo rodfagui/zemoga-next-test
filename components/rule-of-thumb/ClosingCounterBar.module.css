@@ -1,0 +1,54 @@
+.ClosingCounterBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 54px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.4);
+  display: flex
+}
+
+.ClosingCounterBar .closingIn {
+  width: 415px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.ClosingCounterBar .closingIn .text {
+  margin-top: 13px;
+  margin-bottom: 12px;
+  margin-right: 17.99px;
+}
+
+.ClosingCounterBar .triangle {
+  width: 0;
+  margin-left: 19px;
+  border-style: solid;
+  border-width: 0 8px 8px 8px;
+  border-color: transparent transparent rgba(0, 0, 0, 0.4) transparent;
+  transform: rotate(90deg);
+}
+
+.ClosingCounterBar .days {
+  margin-top: 5px;
+  margin-bottom: 6px;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 43px;
+  color: #464646;
+}
+
+.ClosingCounterBar .days span {
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 43px;
+}
+
+
+

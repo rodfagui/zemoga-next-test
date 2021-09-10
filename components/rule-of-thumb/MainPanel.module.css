@@ -1,0 +1,55 @@
+.MainPanel {
+  position: absolute;
+  left: 171px;
+  top: 141px;
+  width: 550px;
+  height: 475px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(54.3656px);
+  color: white;
+}
+
+.MainPanel .info {
+  margin-left: 27px;
+  margin-top: 36px;
+}
+
+.MainPanel .info h3 {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.MainPanel .info h1 {
+  font-weight: 400;
+  font-size: 54px;
+  line-height: 36px;
+  margin-top: 0;
+  margin-bottom: 36px;
+}
+
+.MainPanel .info h2 {
+  font-weight: bold;
+  font-size: 27px;
+  line-height: 32px;
+  margin-bottom: 37px;
+}
+
+.MainPanel .info .description {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  margin-right: 91px;
+}
+
+.MainPanel .info .moreInfo {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.MainPanel .thumbButtons {
+  display: flex;
+  position: absolute;
+  bottom: -3px;
+}
