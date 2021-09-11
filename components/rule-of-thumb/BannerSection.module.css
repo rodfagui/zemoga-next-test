@@ -1,0 +1,57 @@
+.BannerSection {
+  background: white;
+  margin-top: 36px;
+  width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.BannerSection .bannerContainer {
+  height: 88px;
+  background: #ebebeb;
+  display: flex;
+}
+
+.BannerSection .bannerContainer .speak {
+  height: 51px;
+  width: 174px;
+  margin: 19px 9px 18px 18px;
+  word-wrap: break-word;
+}
+
+.BannerSection .bannerContainer .speak p {
+  margin: 0;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: -1.125px;
+}
+
+.BannerSection .bannerContainer .speak span {
+  margin: 0;
+  display: block;
+  font-weight: bold;
+  font-size: 27px;
+  line-height: 32px;
+}
+
+.BannerSection .bannerContainer .description {
+  height: 44px;
+  width: 853px;
+  margin: 22px 20px 22px 9px;
+  word-wrap: break-word;
+}
+
+.BannerSection .bannerContainer .description p {
+  margin: 0;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: -0.75px;
+}
+
+.BannerSection .bannerContainer .dismiss {
+  height: 18px;
+  width: 18px;
+  margin: 35px 18px 35px 17px;
+}

@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 
 import HeroSection from "@/components/rule-of-thumb/HeroSection";
+import BannerSection from "@/components/rule-of-thumb/BannerSection";
 
 const Home: NextPage = () => {
   return (
@@ -14,6 +15,7 @@ const Home: NextPage = () => {
         />
       </Head>
       <HeroSection />
+      <BannerSection />
     </>
   );
 };

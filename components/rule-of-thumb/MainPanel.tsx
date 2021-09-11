@@ -6,7 +6,7 @@ import wikipediaImage from "../../public/wikipedia.svg";
 
 const MainPanel = () => {
   return (
-    <div className={classes.MainPanel}>
+    <section className={classes.MainPanel}>
       <div className={classes.info}>
         <h3>What&apos;s your opinion on</h3>
         <h1>Pope Francis?</h1>
@@ -28,7 +28,7 @@ const MainPanel = () => {
           <Image src={thumbDownImage} alt="thumbDownImage" />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
