@@ -5,7 +5,7 @@ import HeroSection from "@/components/rule-of-thumb/HeroSection";
 import BannerSection from "@/components/rule-of-thumb/BannerSection";
 import PreviousRulingsSection from "@/components/rule-of-thumb/PreviousRulingsSection";
 import SubmitNameSection from "@/components/rule-of-thumb/SubmitNameSection";
-
+import Footer from "@/components/rule-of-thumb/Footer";
 
 const Home: NextPage = () => {
   const homeStyles = {
@@ -13,6 +13,7 @@ const Home: NextPage = () => {
     width: "1440px",
     marginLeft: "auto",
     marginRight: "auto",
+    paddingBottom: "8rem",
   };
 
   return (
@@ -28,6 +29,7 @@ const Home: NextPage = () => {
       <BannerSection />
       <PreviousRulingsSection />
       <SubmitNameSection />
+      <Footer />
     </div>
   );
 };

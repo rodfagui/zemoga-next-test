@@ -1,16 +1,8 @@
-@media screen and (min-width: 1440px) {
-  .HeroSection {
-    position: relative;
-    width: 1440px;
-    height: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    background: url('../../public/hero-image.svg') no-repeat center top;
-  }
-}
-
-@media screen and (min-width: 768px) {
-}
-
-@media screen and (min-width: 375px) {
+.HeroSection {
+  position: relative;
+  width: 1440px;
+  height: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  background: url('../../public/hero-image.svg') no-repeat center top;
 }
