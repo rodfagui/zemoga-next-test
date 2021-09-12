@@ -10,7 +10,10 @@ const PreviousRulingsSection = () => {
       <div className="container">
         <div className={classes.heading}>
           <h1>Previous Rulings</h1>
-          <button>List</button>
+          <select className="select">
+            <option value="0">List</option>
+            <option value="1">Grid</option>
+          </select>
         </div>
         <div className={classes.rulings}>
           <LargeRuling

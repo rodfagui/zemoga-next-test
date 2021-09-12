@@ -5,3 +5,27 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.PreviousRulingsSection .heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 54px;
+}
+
+.PreviousRulingsSection .heading h1 {
+  font-weight: 300;
+  font-size: 45px;
+  line-height: 54px;
+  margin: 0;
+}
+
+.PreviousRulingsSection .heading select {
+  font-weight: normal;
+  font-size: 13.5px;
+  line-height: 100%;
+  width: 173px;
+  height: 36px;
+  background: white;
+  text-align: center;
+}

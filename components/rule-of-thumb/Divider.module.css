@@ -1,0 +1,5 @@
+.Divider {
+  border: 0 none;
+  border-bottom: 2px dotted rgba(70, 70, 70, 1);
+  margin: 1.5rem 0;
+}
