@@ -1,6 +1,6 @@
 import classes from "./MainPanel.module.css";
-import thumbUpImage from "../../public/thumb-up.svg";
-import thumbDownImage from "../../public/thumb-down.svg";
+import thumbUpButton from "../../public/thumb-up-button.svg";
+import thumbDownButton from "../../public/thumb-down-button.svg";
 import Image from "next/image";
 import wikipediaImage from "../../public/wikipedia.svg";
 
@@ -22,10 +22,10 @@ const MainPanel = () => {
       </div>
       <div className={classes.thumbButtons}>
         <div className={classes.thumbButtonUp}>
-          <Image src={thumbUpImage} alt="thumbUpImage" />
+          <Image src={thumbUpButton} alt="thumbUpImage" />
         </div>
         <div className={classes.thumbButtonDown}>
-          <Image src={thumbDownImage} alt="thumbDownImage" />
+          <Image src={thumbDownButton} alt="thumbDownImage" />
         </div>
       </div>
     </section>

@@ -1,0 +1,118 @@
+.LargeRuling {
+  position: relative;
+  width: 100%;
+  height: 170px;
+  margin-top: 36px;
+}
+
+.LargeRuling .image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.LargeRuling .mask {
+  position: relative;
+  width: 1098px;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.0001) 8%,
+    #888888 22.79%,
+    #666666 50%,
+    rgba(51, 51, 51, 0.6) 71.88%
+  );
+  z-index: 10;
+}
+
+.LargeRuling .mask .qualification {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.LargeRuling .mask .qualificationBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 54px;
+}
+
+.LargeRuling .mask .voteSection {
+  position: absolute;
+  top: 0;
+  left: 267px;
+  width: 831px;
+  height: 116px;
+  color: white;
+}
+
+.LargeRuling .mask .voteSection .description {
+  width: 540px;
+}
+
+.LargeRuling .mask .voteSection .description h2 {
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 63px;
+  margin-top: 0;
+  margin-bottom: 1px;
+}
+
+.LargeRuling .mask .voteSection .description p {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  margin-top: 1px;
+  margin-bottom: 0;
+}
+
+.LargeRuling .mask .qualificationBar .thumbUpQualificationBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  background: rgba(60, 187, 180, 0.6);
+  display: flex;
+  padding: 11px 18px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.LargeRuling
+  .mask
+  .qualificationBar
+  .thumbUpQualificationBar
+  .qualificationPercentage {
+  margin-left: 9px;
+  color: white;
+  font-weight: normal;
+  font-size: 27px;
+  line-height: 32px;
+}
+
+.LargeRuling .mask .qualificationBar .thumbDownQualificationBar {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  background: rgba(249, 173, 29, 0.6);
+  display: flex;
+  padding: 11px 18px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.LargeRuling
+  .mask
+  .qualificationBar
+  .thumbDownQualificationBar
+  .qualificationPercentage {
+  margin-right: 9px;
+  color: white;
+  font-weight: normal;
+  font-size: 27px;
+  line-height: 32px;
+}
