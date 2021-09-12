@@ -84,7 +84,7 @@
 .SquareRuling .mask .voteSection .voteButtons .submitVoteButton {
   width: 107px;
   height: 38px;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(48, 48, 48, 0.6);
   border: 1px solid #FFFFFF;
   font-weight: normal;
   font-size: 15px;
@@ -92,6 +92,10 @@
   text-align: center;
   color: white;
   margin-left: 9px;
+}
+
+.SquareRuling .mask .voteSection .voteButtons .submitVoteButton:disabled {
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .SquareRuling .mask .voteSection .date {

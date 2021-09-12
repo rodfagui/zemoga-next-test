@@ -8,10 +8,14 @@ import { thumb } from "types/thumbs";
 
 type Props = {
   thumbs: Array<thumb>;
+  updateThumbVotes: (
+    id: string,
+    votes: { positive: number; negative: number }
+  ) => Promise<{ message: string }>;
 };
 
 const PreviousRulingsSection = (props: Props) => {
-  const { thumbs } = props;
+  const { thumbs, updateThumbVotes } = props;
   return (
     <section className={classes.PreviousRulingsSection}>
       <div className="container">
@@ -32,15 +36,6 @@ const PreviousRulingsSection = (props: Props) => {
             category="sports"
             votes={{ positive: 2, negative: 2 }}
           />
-          <LargeRuling
-            id="1"
-            picture={kanyeSmallImage}
-            name="Kanye West"
-            description="Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit…"
-            lastUpdated="23-01-2020"
-            category="sports"
-            votes={{ positive: 2, negative: 2 }}
-          />
           {thumbs.map((thumb) => (
             <SquareRuling
               key={thumb.id}
@@ -51,6 +46,7 @@ const PreviousRulingsSection = (props: Props) => {
               lastUpdated={thumb.lastUpdated}
               category={thumb.category}
               votes={thumb.votes}
+              updateThumbVotes={updateThumbVotes}
             />
           ))}
         </div>

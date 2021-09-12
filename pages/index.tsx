@@ -14,7 +14,7 @@ import { connectToDatabase } from "../libs/db";
 import { thumb } from "../types/thumbs";
 
 type HomeProps = {
-  thumbs: Array<thumb>
+  thumbs: Array<thumb>;
 };
 
 const Home: NextPage<HomeProps> = (props: HomeProps) => {
@@ -28,6 +28,21 @@ const Home: NextPage<HomeProps> = (props: HomeProps) => {
 
   const { thumbs } = props;
 
+  const updateThumbVotes = async (
+    id: string,
+    votes: { positive: number; negative: number }
+  ): Promise<{ message: string }> => {
+    const response = await fetch("/api/thumbs", {
+      method: "PATCH",
+      body: JSON.stringify({ id, votes }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const data = await response.json();
+    return data;
+  };
+
   return (
     <div style={homeStyles}>
       <Head>
@@ -39,7 +54,10 @@ const Home: NextPage<HomeProps> = (props: HomeProps) => {
       </Head>
       <HeroSection />
       <BannerSection />
-      <PreviousRulingsSection thumbs={thumbs} />
+      <PreviousRulingsSection
+        thumbs={thumbs}
+        updateThumbVotes={updateThumbVotes}
+      />
       <SubmitNameSection />
       <Divider />
       <Footer />
