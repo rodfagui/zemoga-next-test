@@ -4,7 +4,14 @@ import kanyeImage from "../../public/kanye.svg";
 import LargeRuling from "./LargeRuling";
 import SquareRuling from "./SquareRuling";
 
-const PreviousRulingsSection = () => {
+import { thumb } from "types/thumbs";
+
+type Props = {
+  thumbs: Array<thumb>;
+};
+
+const PreviousRulingsSection = (props: Props) => {
+  const { thumbs } = props;
   return (
     <section className={classes.PreviousRulingsSection}>
       <div className="container">
@@ -17,26 +24,35 @@ const PreviousRulingsSection = () => {
         </div>
         <div className={classes.rulings}>
           <LargeRuling
-            image={kanyeSmallImage}
+            id="1"
+            picture={kanyeSmallImage}
             name="Kanye West"
             description="Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit…"
-            registeredDate="23-01-2020"
-            field="sports"
+            lastUpdated="23-01-2020"
+            category="sports"
+            votes={{ positive: 2, negative: 2 }}
           />
           <LargeRuling
-            image={kanyeSmallImage}
+            id="1"
+            picture={kanyeSmallImage}
             name="Kanye West"
             description="Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit…"
-            registeredDate="23-01-2020"
-            field="sports"
+            lastUpdated="23-01-2020"
+            category="sports"
+            votes={{ positive: 2, negative: 2 }}
           />
-          <SquareRuling
-            image={kanyeImage}
-            name="Kanye West"
-            description="Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit…"
-            registeredDate="23-01-2020"
-            field="sports"
-          />
+          {thumbs.map((thumb) => (
+            <SquareRuling
+              key={thumb.id}
+              id={thumb.id}
+              name={thumb.name}
+              description={thumb.description}
+              picture={thumb.picture}
+              lastUpdated={thumb.lastUpdated}
+              category={thumb.category}
+              votes={thumb.votes}
+            />
+          ))}
         </div>
       </div>
     </section>

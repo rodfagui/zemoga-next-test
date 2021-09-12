@@ -4,17 +4,11 @@ import thumbDownSquare from "../../public/thumb-down-square.svg";
 import thumbUpIcon from "../../public/thumb-up-icon.svg";
 import thumbDownIcon from "../../public/thumb-down-icon.svg";
 import Image from "next/image";
+import { thumb } from "../../types/thumbs";
 
-type SquareRuling = {
-  image: string;
-  name: string;
-  description: string;
-  registeredDate: string;
-  field: string;
-};
-
-const SquareRuling = (props: SquareRuling): JSX.Element => {
-  const { image, name, description, registeredDate, field } = props;
+const SquareRuling = (props: thumb): JSX.Element => {
+  const { id, picture, name, description, lastUpdated, category, votes } =
+    props;
   const calculateQualificationBar = (
     thumbUpVotes: number,
     thumbDownVotes: number
@@ -25,8 +19,8 @@ const SquareRuling = (props: SquareRuling): JSX.Element => {
     return [thumbDownPercentaje, thumbUpPercentaje];
   };
   const [thumbDownPercentaje, thumbUpPercentaje] = calculateQualificationBar(
-    125,
-    50
+    votes.positive,
+    votes.negative
   );
   const thumbDownStyle = {
     width: `${thumbDownPercentaje}%`,
@@ -34,10 +28,16 @@ const SquareRuling = (props: SquareRuling): JSX.Element => {
   const thumbUpStyle = {
     width: `${thumbUpPercentaje}%`,
   };
+  const getShortedText = (text: string, quantity: number) => {
+    if (text.length <= quantity) {
+      return text;
+    }
+    return text.substr(0, quantity - 1).trim() + "...";
+  };
   return (
     <div className={classes.SquareRuling}>
       <div className={classes.image}>
-        <Image src={image} alt={name} height="348" width="348" />
+        <Image src={`/${picture}`} alt={name} height="348" width="348" />
       </div>
       <div className={classes.mask}>
         <div className={classes.qualification}>
@@ -46,7 +46,7 @@ const SquareRuling = (props: SquareRuling): JSX.Element => {
         <div className={classes.voteSection}>
           <div className={classes.description}>
             <h2>{name}</h2>
-            <p>{description}</p>
+            <p>{getShortedText(description, 75)}</p>
           </div>
           <div className={classes.date}>
             <span>{"1 month ago in Entertainment"}</span>

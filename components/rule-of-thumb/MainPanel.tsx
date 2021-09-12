@@ -15,9 +15,7 @@ const MainPanel = () => {
           pervert protector? (thumbs down) or a true pedophile punishing
           pontiff? (thumps up)
         </p>
-        <p className={classes.moreInfo}>
-          <Image src={wikipediaImage} alt="wikipediaImage" /> More information
-        </p>
+        <Image src={wikipediaImage} alt="wikipediaImage" /><span>More information</span>
         <h2>What&apos;s your veredict?</h2>
       </div>
       <div className={classes.thumbButtons}>

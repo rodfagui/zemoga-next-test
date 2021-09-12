@@ -4,17 +4,10 @@ import thumbDownSquare from "../../public/thumb-down-square.svg";
 import thumbUpIcon from "../../public/thumb-up-icon.svg";
 import thumbDownIcon from "../../public/thumb-down-icon.svg";
 import Image from "next/image";
+import { thumb } from "../../types/thumbs";
 
-type LargeRuling = {
-  image: string;
-  name: string;
-  description: string;
-  registeredDate: string;
-  field: string;
-};
-
-const LargeRuling = (props: LargeRuling) => {
-  const { image, name, description, registeredDate, field } = props;
+const LargeRuling = (props: thumb) => {
+  const { id, picture, name, description, lastUpdated, category, votes } = props;
   const calculateQualificationBar = (
     thumbUpVotes: number,
     thumbDownVotes: number
@@ -37,7 +30,7 @@ const LargeRuling = (props: LargeRuling) => {
   return (
     <div className={classes.LargeRuling}>
       <div className={classes.image}>
-        <Image src={image} alt={name} height="170px" />
+        <Image src={picture} alt={name} height="170px" />
       </div>
       <div className={classes.mask}>
         <div className={classes.qualification}>
