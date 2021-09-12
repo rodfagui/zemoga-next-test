@@ -1,4 +1,5 @@
 import classes from "./LargeRuling.module.css";
+import thumbUpSquare from "../../public/thumb-up-square.svg";
 import thumbDownSquare from "../../public/thumb-down-square.svg";
 import thumbUpIcon from "../../public/thumb-up-icon.svg";
 import thumbDownIcon from "../../public/thumb-down-icon.svg";
@@ -13,7 +14,7 @@ type LargeRuling = {
 };
 
 const LargeRuling = (props: LargeRuling) => {
-  const { image, name, description } = props;
+  const { image, name, description, registeredDate, field } = props;
   const calculateQualificationBar = (
     thumbUpVotes: number,
     thumbDownVotes: number 
@@ -45,7 +46,16 @@ const LargeRuling = (props: LargeRuling) => {
             <p>{description}</p>
           </div>
           <div className={classes.voteButtons}>
-            
+            <div className={classes.thumbButton}>
+              <Image src={thumbUpSquare} alt="thumbUpSquare" />
+            </div>
+            <div className={classes.thumbButton}>
+              <Image src={thumbDownSquare} alt="thumbDownSquare" />
+            </div>
+            <button type="button" className={classes.submitVoteButton}>Vote Now</button>
+          </div>
+          <div className={classes.date}>
+            <span>{'1 month ago in Entertainment'}</span>
           </div>
         </div>
         <div className={classes.qualificationBar}>

@@ -47,10 +47,12 @@
   width: 831px;
   height: 116px;
   color: white;
+  display: flex;
 }
 
 .LargeRuling .mask .voteSection .description {
   width: 540px;
+  margin-right: 34.62px;
 }
 
 .LargeRuling .mask .voteSection .description h2 {
@@ -67,6 +69,41 @@
   line-height: 22px;
   margin-top: 1px;
   margin-bottom: 0;
+}
+
+.LargeRuling .mask .voteSection .voteButtons {
+  width: 291px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.LargeRuling .mask .voteSection .voteButtons .thumbButton {
+  margin-left: 9px;
+  margin-top: 25px;
+}
+
+.LargeRuling .mask .voteSection .voteButtons .submitVoteButton {
+  width: 135px;
+  height: 46px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #FFFFFF;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: white;
+  margin-top: 25px;
+  margin-left: 9px;
+}
+
+.LargeRuling .mask .voteSection .date {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 8px;
+  margin-right: 14px;
+  margin-bottom: 17px;
 }
 
 .LargeRuling .mask .qualificationBar .thumbUpQualificationBar {
