@@ -1,11 +1,11 @@
-import classes from "./LargeRuling.module.css";
+import classes from "./SquareRuling.module.css";
 import thumbUpSquare from "../../public/thumb-up-square.svg";
 import thumbDownSquare from "../../public/thumb-down-square.svg";
 import thumbUpIcon from "../../public/thumb-up-icon.svg";
 import thumbDownIcon from "../../public/thumb-down-icon.svg";
 import Image from "next/image";
 
-type LargeRuling = {
+type SquareRuling = {
   image: string;
   name: string;
   description: string;
@@ -13,7 +13,7 @@ type LargeRuling = {
   field: string;
 };
 
-const LargeRuling = (props: LargeRuling) => {
+const SquareRuling = (props: SquareRuling): JSX.Element => {
   const { image, name, description, registeredDate, field } = props;
   const calculateQualificationBar = (
     thumbUpVotes: number,
@@ -35,9 +35,9 @@ const LargeRuling = (props: LargeRuling) => {
     width: `${thumbUpPercentaje}%`,
   };
   return (
-    <div className={classes.LargeRuling}>
+    <div className={classes.SquareRuling}>
       <div className={classes.image}>
-        <Image src={image} alt={name} height="170px" />
+        <Image src={image} alt={name} height="348" width="348" />
       </div>
       <div className={classes.mask}>
         <div className={classes.qualification}>
@@ -47,6 +47,9 @@ const LargeRuling = (props: LargeRuling) => {
           <div className={classes.description}>
             <h2>{name}</h2>
             <p>{description}</p>
+          </div>
+          <div className={classes.date}>
+            <span>{"1 month ago in Entertainment"}</span>
           </div>
           <div className={classes.voteButtons}>
             <div className={classes.thumbButton}>
@@ -58,9 +61,6 @@ const LargeRuling = (props: LargeRuling) => {
             <button type="button" className={classes.submitVoteButton}>
               Vote Now
             </button>
-          </div>
-          <div className={classes.date}>
-            <span>{"1 month ago in Entertainment"}</span>
           </div>
         </div>
         <div className={classes.qualificationBar}>
@@ -99,4 +99,4 @@ const LargeRuling = (props: LargeRuling) => {
   );
 };
 
-export default LargeRuling;
+export default SquareRuling;
