@@ -4,6 +4,8 @@ import Head from "next/head";
 import HeroSection from "@/components/rule-of-thumb/HeroSection";
 import BannerSection from "@/components/rule-of-thumb/BannerSection";
 import PreviousRulingsSection from "@/components/rule-of-thumb/PreviousRulingsSection";
+import SubmitNameSection from "@/components/rule-of-thumb/SubmitNameSection";
+
 
 const Home: NextPage = () => {
   const homeStyles = {
@@ -25,6 +27,7 @@ const Home: NextPage = () => {
       <HeroSection />
       <BannerSection />
       <PreviousRulingsSection />
+      <SubmitNameSection />
     </div>
   );
 };
