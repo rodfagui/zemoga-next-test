@@ -1,8 +1,23 @@
-.HeroSection {
-  position: relative;
-  width: 1440px;
-  height: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  background: url('../../public/hero-image.svg') no-repeat center top;
+@media all and (min-width: 1440px) {
+  .HeroSection {
+    position: relative;
+    width: 1440px;
+    height: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    background: url('../../public/hero-image.svg') no-repeat center top;
+  }
+}
+
+
+@media all and (min-width: 768px) and (max-width: 1439px) {
+  .HeroSection {
+    position: relative;
+    width: 768px;
+    height: 460px;
+    margin-left: auto;
+    margin-right: auto;
+    background: url('../../public/hero-image.svg') no-repeat center top;
+    background-size: cover;
+  }
 }

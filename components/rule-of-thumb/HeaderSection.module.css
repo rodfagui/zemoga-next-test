@@ -17,31 +17,78 @@
   align-items: center;
 }
 
-.HeaderSection .mask .logo {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 43px;
-  margin-top: 52px;
-  margin-bottom: 85px;
-}
-
 .HeaderSection .mask .navigation {
-  margin-top: 52px;
-  margin-bottom: 85px;
   display: flex;
 }
 
 .HeaderSection .mask .navigation .navbar a {
   font-style: normal;
   font-weight: 300;
-  font-size: 18px;
-  line-height: 43px;
   color: white;
   text-decoration: none;
-  margin-right: 18px;
 }
 
-.HeaderSection .mask .navigation .search {
-  margin-left: 18px;
+@media all and (min-width: 1440px) {
+  .HeaderSection .mask {
+    height: 180px;
+  }
+
+  .HeaderSection .mask .logo {
+    font-weight: 400;
+    font-size: 2.25rem;
+    line-height: 2.68rem;
+    margin-top: 52px;
+    margin-bottom: 85px;
+  }
+
+  .HeaderSection .mask .navigation {
+    margin-top: 52px;
+    margin-bottom: 85px;
+  }
+  
+  .HeaderSection .mask .navigation .navbar a {
+    font-size: 1.125rem;
+    line-height: 2.68rem;
+    margin-right: 18px;
+  }
+  
+  .HeaderSection .mask .navigation .search {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    margin-left: 18px;
+  }
+}
+
+
+@media all and (min-width: 768px) and (max-width: 1439px) {
+  .HeaderSection .mask {
+    height: 140px;
+  }
+
+  .HeaderSection .mask .logo {
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    margin-top: 35px;
+    margin-bottom: 76px;
+  }
+
+  .HeaderSection .mask .navigation {
+    margin-top: 35px;
+    margin-bottom: 76px;
+  }
+
+  .HeaderSection .mask .navigation .navbar a {
+    font-size: 1rem;
+    line-height: 2rem;
+    margin-right: 10px;
+  }
+
+  .HeaderSection .mask .navigation .search {
+    position: relative;
+    width: 28px;
+    height: 28px;
+    margin-left: 10px;
+  }
 }

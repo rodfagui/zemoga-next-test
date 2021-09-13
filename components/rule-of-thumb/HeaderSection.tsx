@@ -17,7 +17,7 @@ const HeaderSection = () => {
               <a href="#">Login / Sign Up</a>
             </nav>
             <div className={classes.search}>
-              <Image src={searchImage} alt="searchImage"/>
+              <Image src={searchImage} alt="searchImage" layout="fill"/>
             </div>
           </div>
         </div>

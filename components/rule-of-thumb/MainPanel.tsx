@@ -15,15 +15,20 @@ const MainPanel = () => {
           pervert protector? (thumbs down) or a true pedophile punishing
           pontiff? (thumps up)
         </p>
-        <Image src={wikipediaImage} alt="wikipediaImage" /><span>More information</span>
+        <div className={classes.moreInfo}>
+          <div className={classes.moreInfoImage}>
+            <Image src={wikipediaImage} alt="wikipediaImage" layout="fill" />
+          </div>
+          <span>More information</span>
+        </div>
         <h2>What&apos;s your veredict?</h2>
       </div>
       <div className={classes.thumbButtons}>
         <div className={classes.thumbButtonUp}>
-          <Image src={thumbUpButton} alt="thumbUpImage" />
+          <Image src={thumbUpButton} alt="thumbUpImage" layout="fill" />
         </div>
         <div className={classes.thumbButtonDown}>
-          <Image src={thumbDownButton} alt="thumbDownImage" />
+          <Image src={thumbDownButton} alt="thumbDownImage" layout="fill" />
         </div>
       </div>
     </section>

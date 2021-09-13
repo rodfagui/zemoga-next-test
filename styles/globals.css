@@ -19,11 +19,7 @@ h6 {
   font-family: "Lato", sans-serif;
 }
 
-.container {
-  width: 1098px;
-  margin-left: auto;
-  margin-right: auto;
-}
+
 
 a, a:visited {
   color: white;
@@ -39,10 +35,34 @@ ul {
   list-style: none;
 }
 
-.Home {
-  background-color: white;
-  width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 8rem;
+@media all and (min-width: 1440px) {
+  .Home {
+    background-color: white;
+    width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 8rem;
+  }
+
+  .container {
+    width: 1098px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1439px) {
+  .Home {
+    background-color: white;
+    width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5rem;
+  }
+
+  .container {
+    width: 723px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
