@@ -124,7 +124,7 @@ const LargeRuling = (props: LargeRulingProps) => {
       </div>
       <div className={classes.mask}>
         <div className={classes.qualification}>
-          <Image src={qualificationImage} alt="thumbDownSquare" layout="fill" />
+          <Image src={qualificationImage} alt="qualificationImage" layout="fill" />
         </div>
         <div className={classes.voteSection}>
           <div className={classes.description}>
