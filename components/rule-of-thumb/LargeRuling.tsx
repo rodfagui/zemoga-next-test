@@ -54,6 +54,8 @@ const LargeRuling = (props: LargeRulingProps) => {
   const [wasVoteSubmited, setWasVoteSubmited] = useState(false);
   const lastUpdatedTimeAgo = timeAgo.format(new Date(lastUpdated));
 
+  const qualificationImage = votes.positive >= votes.negative ? thumbUpSquare : thumbDownSquare;
+
   const dispatch = useContext<thumbsDispatchContextType>(thumbsDispatchContext);
 
   const [thumbDownPercentaje, thumbUpPercentaje] =
@@ -122,7 +124,7 @@ const LargeRuling = (props: LargeRulingProps) => {
       </div>
       <div className={classes.mask}>
         <div className={classes.qualification}>
-          <Image src={thumbDownSquare} alt="thumbDownSquare" />
+          <Image src={qualificationImage} alt="thumbDownSquare" layout="fill" />
         </div>
         <div className={classes.voteSection}>
           <div className={classes.description}>
@@ -135,14 +137,14 @@ const LargeRuling = (props: LargeRulingProps) => {
               className={classes.thumbButton}
               onClick={handleSelectThumbUp}
             >
-              <Image src={thumbUpSquare} alt="thumbUpSquare" />
+              <Image src={thumbUpSquare} alt="thumbUpSquare" layout="fill" />
             </div>
             <div
               style={thumbDownButtonStyle}
               className={classes.thumbButton}
               onClick={handleSelectThumbDown}
             >
-              <Image src={thumbDownSquare} alt="thumbDownSquare" />
+              <Image src={thumbDownSquare} alt="thumbDownSquare" layout="fill" />
             </div>
             <button
               type="button"
@@ -174,8 +176,7 @@ const LargeRuling = (props: LargeRulingProps) => {
               <Image
                 src={thumbUpIcon}
                 alt="thumbUpIcon"
-                height={22.5}
-                width={22.5}
+                layout="fill"
               />
             </div>
             <div className={classes.qualificationPercentage}>
@@ -193,8 +194,7 @@ const LargeRuling = (props: LargeRulingProps) => {
               <Image
                 src={thumbDownIcon}
                 alt="thumbUpIcon"
-                height={22.5}
-                width={22.5}
+                layout="fill"
               />
             </div>
           </div>

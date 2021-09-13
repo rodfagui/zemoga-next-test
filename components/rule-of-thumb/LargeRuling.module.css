@@ -1,161 +1,384 @@
-.LargeRuling {
-  position: relative;
-  width: 100%;
-  height: 170px;
-  margin-top: 18px;
+@media all and (min-width: 1440px) {
+  .LargeRuling {
+    position: relative;
+    width: 100%;
+    height: 170px;
+    margin-top: 18px;
+  }
+
+  .LargeRuling .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 170px;
+    width: 170px;
+  }
+
+  .LargeRuling .mask {
+    position: relative;
+    width: 1098px;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.0001) 5%,
+      #888888 22.79%,
+      #666666 50%,
+      rgba(51, 51, 51, 0.6) 71.88%
+    );
+    z-index: 10;
+  }
+
+  .LargeRuling .mask .qualification {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 45px;
+  }
+
+  .LargeRuling .mask .qualificationBar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 54px;
+  }
+
+  .LargeRuling .mask .voteSection {
+    position: absolute;
+    top: 0;
+    left: 259px;
+    width: 839px;
+    height: 116px;
+    color: white;
+    display: flex;
+  }
+
+  .LargeRuling .mask .voteSection .description {
+    width: 540.38px;
+    margin-right: 43.62px;
+  }
+
+  .LargeRuling .mask .voteSection .description h2 {
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 63px;
+    margin-top: 0;
+    margin-bottom: 1px;
+  }
+
+  .LargeRuling .mask .voteSection .description p {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    margin-top: 1px;
+    margin-bottom: 0;
+  }
+
+  .LargeRuling .mask .voteSection .voteButtons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 14px;
+    margin-left: 0px;
+    margin-top: 25px;
+    width: 241px;
+  }
+
+  .LargeRuling .mask .voteSection .voteButtons .thumbButton {
+    position: relative;
+    margin-right: 9px;
+    width: 45px;
+    height: 45px;
+  }
+
+  .LargeRuling .mask .voteSection .voteButtons .submitVoteButton {
+    width: 135px;
+    height: 45px;
+    background: rgba(48, 48, 48, 0.6);
+    border: 1px solid #ffffff;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: white;
+  }
+
+  .LargeRuling .mask .voteSection .voteButtons .submitVoteButton:disabled {
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  .LargeRuling .mask .voteSection .date {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 8px;
+    margin-right: 14px;
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  .LargeRuling .mask .qualificationBar .thumbUpQualificationBar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    background: rgba(60, 187, 180, 0.6);
+    display: flex;
+    padding: 11px 18px;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .LargeRuling
+    .mask
+    .qualificationBar
+    .thumbUpQualificationBar
+    .qualificationIcon {
+    position: relative;
+    width: 22.5px;
+    height: 22.5px;
+  }
+
+  .LargeRuling
+    .mask
+    .qualificationBar
+    .thumbUpQualificationBar
+    .qualificationPercentage {
+    margin-left: 9px;
+    color: white;
+    font-weight: normal;
+    font-size: 27px;
+    line-height: 32px;
+  }
+
+  .LargeRuling .mask .qualificationBar .thumbDownQualificationBar {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    background: rgba(249, 173, 29, 0.6);
+    display: flex;
+    padding: 11px 18px;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .LargeRuling
+    .mask
+    .qualificationBar
+    .thumbDownQualificationBar
+    .qualificationIcon {
+    position: relative;
+    width: 22.5px;
+    height: 22.5px;
+  }
+
+  .LargeRuling
+    .mask
+    .qualificationBar
+    .thumbDownQualificationBar
+    .qualificationPercentage {
+    margin-right: 9px;
+    color: white;
+    font-weight: normal;
+    font-size: 27px;
+    line-height: 32px;
+  }
 }
 
-.LargeRuling .image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  height: 170px;
-  width: 170px;
-}
+@media all and (min-width: 768px) and (max-width: 1439px) {
+  .LargeRuling {
+    position: relative;
+    width: 100%;
+    height: 142px;
+    margin-top: 18px;
+  }
 
-.LargeRuling .mask {
-  position: relative;
-  width: 1098px;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0.0001) 5%,
-    #888888 22.79%,
-    #666666 50%,
-    rgba(51, 51, 51, 0.6) 71.88%
-  );
-  z-index: 10;
-}
+  .LargeRuling .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 142px;
+    width: 142px;
+  }
 
-.LargeRuling .mask .qualification {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
+  .LargeRuling .mask {
+    position: relative;
+    width: 723px;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.0001) 10%,
+      #888888 22.79%,
+      #666666 50%,
+      rgba(51, 51, 51, 0.6) 71.88%
+    );
+    z-index: 10;
+  }
 
-.LargeRuling .mask .qualificationBar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 54px;
-}
+  .LargeRuling .mask .qualification {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+  }
 
-.LargeRuling .mask .voteSection {
-  position: absolute;
-  top: 0;
-  left: 267px;
-  width: 831px;
-  height: 116px;
-  color: white;
-  display: flex;
-}
+  .LargeRuling .mask .qualificationBar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 36px;
+  }
 
-.LargeRuling .mask .voteSection .description {
-  width: 540px;
-  margin-right: 34.62px;
-}
+  .LargeRuling .mask .voteSection {
+    position: absolute;
+    top: 0;
+    left: 150px;
+    width: 573px;
+    height: 106px;
+    color: white;
+    display: flex;
+  }
 
-.LargeRuling .mask .voteSection .description h2 {
-  font-weight: normal;
-  font-size: 36px;
-  line-height: 63px;
-  margin-top: 0;
-  margin-bottom: 1px;
-}
+  .LargeRuling .mask .voteSection .description {
+    width: 339.57px;
+    margin-right: 29.22px;
+  }
 
-.LargeRuling .mask .voteSection .description p {
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 22px;
-  margin-top: 1px;
-  margin-bottom: 0;
-}
+  .LargeRuling .mask .voteSection .description h2 {
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 33.6px;
+    margin-top: 0;
+    margin-bottom: 18px;
+  }
 
-.LargeRuling .mask .voteSection .voteButtons {
-  width: 291px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
+  .LargeRuling .mask .voteSection .description p {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16.8px;
+    margin-top: 18px;
+    margin-bottom: 0;
+  }
 
-.LargeRuling .mask .voteSection .voteButtons .thumbButton {
-  margin-left: 9px;
-  margin-top: 25px;
-}
+  .LargeRuling .mask .voteSection .voteButtons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 12px;
+    margin-left: 0px;
+    margin-top: 25px;
+    width: 192.21px;
+  }
 
-.LargeRuling .mask .voteSection .voteButtons .submitVoteButton {
-  width: 135px;
-  height: 46px;
-  background: rgba(48, 48, 48, 0.6);
-  border: 1px solid #FFFFFF;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 22px;
-  text-align: center;
-  color: white;
-  margin-top: 25px;
-  margin-left: 9px;
-}
+  .LargeRuling .mask .voteSection .voteButtons .thumbButton {
+    position: relative;
+    margin-right: 9px;
+    width: 30px;
+    height: 30px;
+  }
 
-.LargeRuling .mask .voteSection .voteButtons .submitVoteButton:disabled {
-  background: rgba(0, 0, 0, 0.6);
-}
+  .LargeRuling .mask .voteSection .voteButtons .submitVoteButton {
+    width: 107px;
+    height: 38px;
+    background: rgba(48, 48, 48, 0.6);
+    border: 1px solid #ffffff;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    color: white;
+  }
 
-.LargeRuling .mask .voteSection .date {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin-top: 8px;
-  margin-right: 14px;
-  margin-bottom: 17px;
-}
+  .LargeRuling .mask .voteSection .voteButtons .submitVoteButton:disabled {
+    background: rgba(0, 0, 0, 0.6);
+  }
 
-.LargeRuling .mask .qualificationBar .thumbUpQualificationBar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  background: rgba(60, 187, 180, 0.6);
-  display: flex;
-  padding: 11px 18px;
-  align-items: center;
-  justify-content: flex-start;
-}
+  .LargeRuling .mask .voteSection .date {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 8px;
+    margin-right: 12px;
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: right;
+  }
 
-.LargeRuling
-  .mask
-  .qualificationBar
-  .thumbUpQualificationBar
-  .qualificationPercentage {
-  margin-left: 9px;
-  color: white;
-  font-weight: normal;
-  font-size: 27px;
-  line-height: 32px;
-}
+  .LargeRuling .mask .qualificationBar .thumbUpQualificationBar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    background: rgba(60, 187, 180, 0.6);
+    display: flex;
+    padding: 7px 12px;
+    align-items: center;
+    justify-content: flex-start;
+  }
 
-.LargeRuling .mask .qualificationBar .thumbDownQualificationBar {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  height: 100%;
-  background: rgba(249, 173, 29, 0.6);
-  display: flex;
-  padding: 11px 18px;
-  align-items: center;
-  justify-content: flex-end;
-}
+  .LargeRuling
+    .mask
+    .qualificationBar
+    .thumbUpQualificationBar
+    .qualificationIcon {
+    position: relative;
+    width: 15px;
+    height: 15px;
+  }
 
-.LargeRuling
-  .mask
-  .qualificationBar
-  .thumbDownQualificationBar
-  .qualificationPercentage {
-  margin-right: 9px;
-  color: white;
-  font-weight: normal;
-  font-size: 27px;
-  line-height: 32px;
+  .LargeRuling
+    .mask
+    .qualificationBar
+    .thumbUpQualificationBar
+    .qualificationPercentage {
+    margin-left: 6px;
+    color: white;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21.6px;
+  }
+
+  .LargeRuling .mask .qualificationBar .thumbDownQualificationBar {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    background: rgba(249, 173, 29, 0.6);
+    display: flex;
+    padding: 11px 18px;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .LargeRuling
+    .mask
+    .qualificationBar
+    .thumbDownQualificationBar
+    .qualificationIcon {
+    position: relative;
+    width: 15px;
+    height: 15px;
+  }
+
+  .LargeRuling
+    .mask
+    .qualificationBar
+    .thumbDownQualificationBar
+    .qualificationPercentage {
+    margin-right: 6px;
+    color: white;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21.6px;
+  }
 }
