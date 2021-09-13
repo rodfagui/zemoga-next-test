@@ -1,38 +1,81 @@
-.PreviousRulingsSection {
-  background: white;
-  margin-top: 36px;
-  width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
+@media all and (min-width: 1440px) {
+  .PreviousRulingsSection {
+    background: white;
+    margin-top: 36px;
+    width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .PreviousRulingsSection .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 54px;
+  }
+
+  .PreviousRulingsSection .heading h1 {
+    font-weight: 300;
+    font-size: 45px;
+    line-height: 54px;
+    margin: 0;
+  }
+
+  .PreviousRulingsSection .heading select {
+    font-weight: normal;
+    font-size: 13.5px;
+    line-height: 100%;
+    width: 173px;
+    height: 36px;
+    background: white;
+    text-align: center;
+  }
+
+  .PreviousRulingsSection .rulings {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 }
 
-.PreviousRulingsSection .heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 54px;
-}
+@media all and (min-width: 768px) and (max-width: 1439px) {
+  .PreviousRulingsSection {
+    background: white;
+    margin-top: 28px;
+    width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-.PreviousRulingsSection .heading h1 {
-  font-weight: 300;
-  font-size: 45px;
-  line-height: 54px;
-  margin: 0;
-}
+  .PreviousRulingsSection .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 29px;
+  }
 
-.PreviousRulingsSection .heading select {
-  font-weight: normal;
-  font-size: 13.5px;
-  line-height: 100%;
-  width: 173px;
-  height: 36px;
-  background: white;
-  text-align: center;
-}
+  .PreviousRulingsSection .heading h1 {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 28.8px;
+    margin: 0;
+  }
 
-.PreviousRulingsSection .rulings {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  .PreviousRulingsSection .heading select {
+    font-weight: normal;
+    font-size: 10.5px;
+    line-height: 100%;
+    width: 131px;
+    height: 28px;
+    background: white;
+    text-align: center;
+  }
+
+  .PreviousRulingsSection .rulings {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 }
