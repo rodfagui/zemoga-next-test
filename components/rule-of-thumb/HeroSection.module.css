@@ -21,3 +21,14 @@
     background-size: cover;
   }
 }
+
+@media all and (min-width: 375px) and (max-width: 768px) {
+  .HeroSection {
+    position: relative;
+    width: 375px;
+    height: 418px;
+    margin-left: auto;
+    margin-right: auto;
+    background: url('../../public/hero-image-small.svg') no-repeat center top;
+  }
+} 

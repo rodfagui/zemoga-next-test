@@ -41,37 +41,37 @@
     width: 550px;
     height: 475px;
   }
-  
+
   .MainPanel .info {
     margin-left: 27px;
     margin-top: 36px;
   }
-  
+
   .MainPanel .info h3 {
     font-size: 18px;
     line-height: 22px;
   }
-  
+
   .MainPanel .info h1 {
     font-size: 54px;
     line-height: 36px;
     margin-bottom: 36px;
   }
-  
+
   .MainPanel .info h2 {
     font-size: 27px;
     line-height: 32px;
     margin-top: 0;
     margin-bottom: 37px;
   }
-  
+
   .MainPanel .info .description {
     font-size: 24px;
     line-height: 29px;
     margin-right: 91px;
     margin-bottom: 24px;
   }
-  
+
   .MainPanel .info .moreInfo {
     font-size: 18px;
     line-height: 22px;
@@ -85,14 +85,15 @@
     margin-right: 9px;
     display: inline-block;
   }
-  
+
   .MainPanel .thumbButtons {
     display: flex;
     position: absolute;
     bottom: 0;
   }
 
-  .MainPanel .thumbButtons .thumbButtonUp, .thumbButtonDown {
+  .MainPanel .thumbButtons .thumbButtonUp,
+  .thumbButtonDown {
     position: relative;
     width: 275px;
     height: 82px;
@@ -106,38 +107,38 @@
     width: 368px;
     height: 321px;
   }
-  
+
   .MainPanel .info {
     margin-left: 21px;
     margin-top: 28px;
   }
-  
+
   .MainPanel .info h3 {
     font-size: 14px;
     line-height: 17px;
     margin-bottom: 0;
   }
-  
+
   .MainPanel .info h1 {
     font-size: 28px;
     line-height: 36px;
     margin-bottom: 21px;
   }
-  
+
   .MainPanel .info h2 {
     font-size: 21px;
     line-height: 25px;
     margin-top: 0;
     margin-bottom: 28px;
   }
-  
+
   .MainPanel .info .description {
     font-size: 17.5px;
     line-height: 21px;
     margin-right: 23px;
     margin-bottom: 14px;
   }
-  
+
   .MainPanel .info .moreInfo {
     font-size: 14px;
     line-height: 17px;
@@ -151,15 +152,79 @@
     margin-right: 7px;
     display: inline-block;
   }
-  
+
   .MainPanel .thumbButtons {
     display: flex;
     position: absolute;
     bottom: 0;
   }
-  .MainPanel .thumbButtons .thumbButtonUp, .thumbButtonDown {
+
+  .MainPanel .thumbButtons .thumbButtonUp,
+  .thumbButtonDown {
     position: relative;
     width: 184px;
     height: 38.5px;
+  }
+}
+
+@media all and (min-width: 375px) and (max-width: 768px) {
+  .MainPanel {
+    left: 12px;
+    top: 66px;
+    width: 204px;
+    height: 292px;
+    backdrop-filter: blur(30px);
+  }
+
+  .MainPanel .info {
+    margin-left: 12px;
+    margin-top: 12px;
+  }
+
+  .MainPanel .info h3 {
+    font-size: 12px;
+    line-height: 14.4px;
+    margin-bottom: 0;
+  }
+
+  .MainPanel .info h1 {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 1px;
+  }
+
+  .MainPanel .info h2 {
+    font-size: 12px;
+    line-height: 14.4px;
+    margin-top: 0;
+    margin-bottom: 13px;
+  }
+
+  .MainPanel .info .description {
+    font-size: 15px;
+    line-height: 17px;
+    margin-right: 12px;
+    margin-bottom: 12px;
+  }
+
+  .MainPanel .info .moreInfo {
+    display: none;
+  }
+
+  .MainPanel .info .moreInfo .moreInfoImage {
+    display: none;
+  }
+
+  .MainPanel .thumbButtons {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .MainPanel .thumbButtons .thumbButtonUp,
+  .thumbButtonDown {
+    position: relative;
+    width: 102px;
+    height: 32px;
   }
 }

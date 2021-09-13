@@ -19,8 +19,6 @@ h6 {
   font-family: "Lato", sans-serif;
 }
 
-
-
 a, a:visited {
   color: white;
 }
@@ -62,6 +60,22 @@ ul {
 
   .container {
     width: 723px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media all and (min-width: 375px) and (max-width: 768px) {
+  .Home {
+    background-color: white;
+    width: 375px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5rem;
+  }
+
+  .container {
+    width: 351px;
     margin-left: auto;
     margin-right: auto;
   }

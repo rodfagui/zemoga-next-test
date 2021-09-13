@@ -15,7 +15,7 @@ type Props = {
 
 const PreviousRulingsSection = (props: Props) => {
   const { thumbs, updateThumbVotes } = props;
-  const [selectedRenderOption, setSelectedRenderOption] = useState("list");
+  const [selectedRenderOption, setSelectedRenderOption] = useState("grid");
   const renderedList =
     selectedRenderOption === "list"
       ? thumbs.map((thumb) => (

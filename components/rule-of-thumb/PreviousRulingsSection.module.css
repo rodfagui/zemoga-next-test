@@ -81,3 +81,45 @@
     flex-wrap: wrap;
   }
 }
+
+@media all and (min-width: 375px) and (max-width: 768px) {
+  .PreviousRulingsSection {
+    background: white;
+    margin-top: 28px;
+    width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .PreviousRulingsSection .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 29px;
+  }
+
+  .PreviousRulingsSection .heading h1 {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 28.8px;
+    margin: 0;
+  }
+
+  .PreviousRulingsSection .heading select {
+    font-weight: normal;
+    font-size: 10.5px;
+    line-height: 100%;
+    width: 131px;
+    height: 28px;
+    background: white;
+    text-align: center;
+  }
+
+  .PreviousRulingsSection .rulings {
+    margin-top: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}

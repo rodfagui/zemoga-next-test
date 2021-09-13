@@ -1,6 +1,10 @@
-import classes from "./HeaderSection.module.css";
-import searchImage from "../../public/search.svg";
+
 import Image from "next/image";
+
+import searchImage from "../../public/search.svg";
+import hamburguerImage from "../../public/hamburguer-button.svg";
+
+import classes from "./HeaderSection.module.css";
 
 const HeaderSection = () => {
   return (
@@ -10,6 +14,9 @@ const HeaderSection = () => {
           <div className={classes.logo}>Rule of thumb.</div>
           <div className={classes.navigation}>
             <nav className={classes.navbar}>
+              <div className={classes.hamburguerMenu}>
+                <Image src={hamburguerImage} alt="hamburguerImage" layout="fill"/>
+              </div>
               <a href="#" className="active">
                 Past trials
               </a>
