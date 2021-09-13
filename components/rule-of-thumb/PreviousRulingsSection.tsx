@@ -45,7 +45,7 @@ const PreviousRulingsSection = (props: Props) => {
           />
         ));
   return (
-    <section className={classes.PreviousRulingsSection}>
+    <main className={classes.PreviousRulingsSection}>
       <div className="container">
         <div className={classes.heading}>
           <h1>Previous Rulings</h1>
@@ -60,7 +60,7 @@ const PreviousRulingsSection = (props: Props) => {
         </div>
         <div className={classes.rulings}>{renderedList}</div>
       </div>
-    </section>
+    </main>
   );
 };
 

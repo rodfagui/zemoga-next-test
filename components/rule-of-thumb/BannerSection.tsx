@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const BannerSection = () => {
   return (
-    <section className={classes.BannerSection}>
+    <aside className={classes.BannerSection}>
       <div className={`container ${classes.bannerContainer}`}>
         <div className={classes.speak}>
           <p>
@@ -22,7 +22,7 @@ const BannerSection = () => {
           <Image src={closeImage} alt="closeImage"/>
         </div>
       </div>
-    </section>
+    </aside>
   );
 };
 

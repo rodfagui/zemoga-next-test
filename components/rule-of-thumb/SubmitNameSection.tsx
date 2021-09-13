@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const SubmitNameSection = () => {
   return (
-    <section className={classes.SubmitNameSection}>
+    <aside className={classes.SubmitNameSection}>
       <div className={`container ${classes.bannerContainer}`}>
         <div className={classes.bannerImage}>
           <Image src={bannerImage} alt="bannerImage" />
@@ -16,7 +16,7 @@ const SubmitNameSection = () => {
           <button type="button" className={classes.bannerButton}>Submit a name</button>
         </div>
       </div>
-    </section>
+    </aside>
   );
 };
 

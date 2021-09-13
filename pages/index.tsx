@@ -51,7 +51,7 @@ const Home: NextPage<HomeProps> = (props: HomeProps) => {
   };
 
   return (
-    <div style={homeStyles}>
+    <div className="Home">
       <Head>
         <title>Rule of thumb</title>
         <meta

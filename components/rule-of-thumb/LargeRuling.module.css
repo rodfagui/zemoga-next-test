@@ -88,7 +88,7 @@
 .LargeRuling .mask .voteSection .voteButtons .submitVoteButton {
   width: 135px;
   height: 46px;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(48, 48, 48, 0.6);
   border: 1px solid #FFFFFF;
   font-weight: normal;
   font-size: 18px;
@@ -97,6 +97,10 @@
   color: white;
   margin-top: 25px;
   margin-left: 9px;
+}
+
+.LargeRuling .mask .voteSection .voteButtons .submitVoteButton:disabled {
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .LargeRuling .mask .voteSection .date {

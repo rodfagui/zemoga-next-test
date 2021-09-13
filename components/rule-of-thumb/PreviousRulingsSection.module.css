@@ -29,3 +29,10 @@
   background: white;
   text-align: center;
 }
+
+.PreviousRulingsSection .rulings {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}

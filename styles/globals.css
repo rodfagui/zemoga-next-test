@@ -38,3 +38,11 @@ ul {
   margin: 0;
   list-style: none;
 }
+
+.Home {
+  background-color: white;
+  width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 8rem;
+}
