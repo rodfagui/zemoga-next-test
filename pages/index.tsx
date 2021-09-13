@@ -1,7 +1,6 @@
 import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
-import { ReactNode } from "react";
-import { ParsedUrlQuery } from "querystring";
+import { useContext, useEffect } from "react";
 
 import HeroSection from "@/components/rule-of-thumb/HeroSection";
 import BannerSection from "@/components/rule-of-thumb/BannerSection";
@@ -11,7 +10,8 @@ import Divider from "@/components/rule-of-thumb/Divider";
 import Footer from "@/components/rule-of-thumb/Footer";
 
 import { connectToDatabase } from "../libs/db";
-import { thumb } from "../types/thumbs";
+import { thumb, thumbsContextType, thumbsDispatchContextType } from "../types/thumbs";
+import { thumbsContext, thumbsDispatchContext } from "contexts/thumbs.context";
 
 type HomeProps = {
   thumbs: Array<thumb>;
@@ -26,7 +26,14 @@ const Home: NextPage<HomeProps> = (props: HomeProps) => {
     paddingBottom: "8rem",
   };
 
-  const { thumbs } = props;
+  const { thumbs: thumbsProps } = props;
+
+  const thumbs = useContext<thumbsContextType>(thumbsContext);
+  const dispatch = useContext<thumbsDispatchContextType>(thumbsDispatchContext);
+
+  useEffect(() => {
+    dispatch({ type: "SET", thumbs: thumbsProps });
+  }, [thumbsProps]);
 
   const updateThumbVotes = async (
     id: string,

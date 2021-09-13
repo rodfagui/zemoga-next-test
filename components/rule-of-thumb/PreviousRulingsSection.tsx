@@ -1,6 +1,5 @@
+import { useState } from "react";
 import classes from "./PreviousRulingsSection.module.css";
-import kanyeSmallImage from "../../public/kanye-small.svg";
-import kanyeImage from "../../public/kanye.svg";
 import LargeRuling from "./LargeRuling";
 import SquareRuling from "./SquareRuling";
 
@@ -16,40 +15,50 @@ type Props = {
 
 const PreviousRulingsSection = (props: Props) => {
   const { thumbs, updateThumbVotes } = props;
+  const [selectedRenderOption, setSelectedRenderOption] = useState("list");
+  const renderedList =
+    selectedRenderOption === "list"
+      ? thumbs.map((thumb) => (
+          <LargeRuling
+            key={thumb.id}
+            id={thumb.id}
+            name={thumb.name}
+            description={thumb.description}
+            picture={thumb.picture}
+            lastUpdated={thumb.lastUpdated}
+            category={thumb.category}
+            votes={thumb.votes}
+            updateThumbVotes={updateThumbVotes}
+          />
+        ))
+      : thumbs.map((thumb) => (
+          <SquareRuling
+            key={thumb.id}
+            id={thumb.id}
+            name={thumb.name}
+            description={thumb.description}
+            picture={thumb.picture}
+            lastUpdated={thumb.lastUpdated}
+            category={thumb.category}
+            votes={thumb.votes}
+            updateThumbVotes={updateThumbVotes}
+          />
+        ));
   return (
     <section className={classes.PreviousRulingsSection}>
       <div className="container">
         <div className={classes.heading}>
           <h1>Previous Rulings</h1>
-          <select className="select">
-            <option value="0">List</option>
-            <option value="1">Grid</option>
+          <select
+            className="select"
+            value={selectedRenderOption}
+            onChange={(evt) => setSelectedRenderOption(evt.target.value)}
+          >
+            <option value="list">List</option>
+            <option value="grid">Grid</option>
           </select>
         </div>
-        <div className={classes.rulings}>
-          <LargeRuling
-            id="1"
-            picture={kanyeSmallImage}
-            name="Kanye West"
-            description="Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit…"
-            lastUpdated="23-01-2020"
-            category="sports"
-            votes={{ positive: 2, negative: 2 }}
-          />
-          {thumbs.map((thumb) => (
-            <SquareRuling
-              key={thumb.id}
-              id={thumb.id}
-              name={thumb.name}
-              description={thumb.description}
-              picture={thumb.picture}
-              lastUpdated={thumb.lastUpdated}
-              category={thumb.category}
-              votes={thumb.votes}
-              updateThumbVotes={updateThumbVotes}
-            />
-          ))}
-        </div>
+        <div className={classes.rulings}>{renderedList}</div>
       </div>
     </section>
   );

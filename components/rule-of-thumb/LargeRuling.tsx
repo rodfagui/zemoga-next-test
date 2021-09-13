@@ -1,36 +1,124 @@
+import Image from "next/image";
+import { useState, useContext } from "react";
+import TimeAgo from "javascript-time-ago";
+import en from "javascript-time-ago/locale/en";
+
 import classes from "./LargeRuling.module.css";
+
 import thumbUpSquare from "../../public/thumb-up-square.svg";
 import thumbDownSquare from "../../public/thumb-down-square.svg";
 import thumbUpIcon from "../../public/thumb-up-icon.svg";
 import thumbDownIcon from "../../public/thumb-down-icon.svg";
-import Image from "next/image";
-import { thumb } from "../../types/thumbs";
 
-const LargeRuling = (props: thumb) => {
-  const { id, picture, name, description, lastUpdated, category, votes } = props;
-  const calculateQualificationBar = (
-    thumbUpVotes: number,
-    thumbDownVotes: number
-  ) => {
-    const totalVotes = thumbUpVotes + thumbDownVotes;
-    const thumbUpPercentaje = Math.round((thumbUpVotes / totalVotes) * 100);
-    const thumbDownPercentaje = 100 - thumbUpPercentaje;
-    return [thumbDownPercentaje, thumbUpPercentaje];
+import { calculateQualificationBarPercentages } from "utils/votes";
+import { getShortedText } from "utils/string";
+
+import { thumbsDispatchContextType } from "types/thumbs";
+import { thumbsDispatchContext } from "contexts/thumbs.context";
+
+type LargeRulingProps = {
+  id: string;
+  name: string;
+  description: string;
+  category: string;
+  picture: string;
+  lastUpdated: number | Date;
+  votes: {
+    positive: number;
+    negative: number;
   };
-  const [thumbDownPercentaje, thumbUpPercentaje] = calculateQualificationBar(
-    125,
-    50
-  );
+  updateThumbVotes: (
+    id: string,
+    votes: { positive: number; negative: number }
+  ) => Promise<{ message: string }>;
+};
+
+const LargeRuling = (props: LargeRulingProps) => {
+  TimeAgo.addLocale(en);
+
+  const timeAgo = new TimeAgo("en-US");
+
+  const {
+    id,
+    picture,
+    name,
+    description,
+    lastUpdated,
+    category,
+    votes,
+    updateThumbVotes,
+  } = props;
+
+  const [isThumbUpSelected, setIsThumUpSelected] = useState(false);
+  const [isThumbDownSelected, setIsThumDownSelected] = useState(false);
+  const [wasVoteSubmited, setWasVoteSubmited] = useState(false);
+  const lastUpdatedTimeAgo = timeAgo.format(new Date(lastUpdated));
+
+  const dispatch = useContext<thumbsDispatchContextType>(thumbsDispatchContext);
+
+  const [thumbDownPercentaje, thumbUpPercentaje] =
+    calculateQualificationBarPercentages(votes.positive, votes.negative);
+
   const thumbDownStyle = {
     width: `${thumbDownPercentaje}%`,
   };
   const thumbUpStyle = {
     width: `${thumbUpPercentaje}%`,
   };
+
+  const handleSelectThumbUp = () => {
+    setIsThumUpSelected(!isThumbUpSelected);
+    setIsThumDownSelected(false);
+  };
+  const handleSelectThumbDown = () => {
+    setIsThumDownSelected(!isThumbDownSelected);
+    setIsThumUpSelected(false);
+  };
+  const handleClickSubmitVoteButton = async (
+    id: string,
+    isThumbUpSelected: boolean,
+    isThumbDownSelected: boolean,
+    wasVoteSubmited: boolean
+  ) => {
+    if (wasVoteSubmited) {
+      setIsThumUpSelected(false);
+      setIsThumDownSelected(false);
+      setWasVoteSubmited(false);
+    } else {
+      let newVotes = {
+        positive: votes.positive,
+        negative: votes.negative,
+      };
+      if (isThumbUpSelected) {
+        newVotes.positive = newVotes.positive + 1;
+      } else {
+        if (isThumbDownSelected) {
+          newVotes.negative = newVotes.negative + 1;
+        }
+      }
+      const data = await updateThumbVotes(id, newVotes);
+      if (data.message === "Thumb changed!") {
+        dispatch({ type: "UPDATE", id: id, votes: newVotes });
+        setWasVoteSubmited(true);
+      }
+    }
+  };
+
+  const thumbUpButtonStyle = {
+    border: isThumbUpSelected ? "1px solid #ffffff" : "none",
+    display: wasVoteSubmited ? "none" : "",
+  };
+  const thumbDownButtonStyle = {
+    border: isThumbDownSelected ? "1px solid #ffffff" : "none",
+    display: wasVoteSubmited ? "none" : "",
+  };
+
+  const isSubmitButtonDisabled = !(isThumbUpSelected || isThumbDownSelected);
+
   return (
     <div className={classes.LargeRuling}>
       <div className={classes.image}>
-        <Image src={picture} alt={name} height="170px" />
+        <Image src={`/${picture}`} alt={name} layout="fill" />
       </div>
       <div className={classes.mask}>
         <div className={classes.qualification}>
@@ -39,21 +127,45 @@ const LargeRuling = (props: thumb) => {
         <div className={classes.voteSection}>
           <div className={classes.description}>
             <h2>{name}</h2>
-            <p>{description}</p>
+            <p>{getShortedText(description, 180)}</p>
           </div>
           <div className={classes.voteButtons}>
-            <div className={classes.thumbButton}>
+            <div
+              style={thumbUpButtonStyle}
+              className={classes.thumbButton}
+              onClick={handleSelectThumbUp}
+            >
               <Image src={thumbUpSquare} alt="thumbUpSquare" />
             </div>
-            <div className={classes.thumbButton}>
+            <div
+              style={thumbDownButtonStyle}
+              className={classes.thumbButton}
+              onClick={handleSelectThumbDown}
+            >
               <Image src={thumbDownSquare} alt="thumbDownSquare" />
             </div>
-            <button type="button" className={classes.submitVoteButton}>
-              Vote Now
+            <button
+              type="button"
+              className={classes.submitVoteButton}
+              disabled={isSubmitButtonDisabled}
+              onClick={() =>
+                handleClickSubmitVoteButton(
+                  id,
+                  isThumbUpSelected,
+                  isThumbDownSelected,
+                  wasVoteSubmited
+                )
+              }
+            >
+              {wasVoteSubmited ? "Vote Again" : "Vote Now"}
             </button>
           </div>
           <div className={classes.date}>
-            <span>{"1 month ago in Entertainment"}</span>
+            <span>
+              {wasVoteSubmited
+                ? "Thank you for your vote!"
+                : `${lastUpdatedTimeAgo} in ${category}`}
+            </span>
           </div>
         </div>
         <div className={classes.qualificationBar}>

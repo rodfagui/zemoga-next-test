@@ -1,14 +1,20 @@
-import { useState } from "react";
+import Image from "next/image";
+import { useState, useContext } from "react";
 import TimeAgo from "javascript-time-ago";
 import en from "javascript-time-ago/locale/en";
 
 import classes from "./SquareRuling.module.css";
+
 import thumbUpSquare from "../../public/thumb-up-square.svg";
 import thumbDownSquare from "../../public/thumb-down-square.svg";
 import thumbUpIcon from "../../public/thumb-up-icon.svg";
 import thumbDownIcon from "../../public/thumb-down-icon.svg";
-import Image from "next/image";
-import { thumb } from "../../types/thumbs";
+
+import { calculateQualificationBarPercentages } from "utils/votes";
+import { getShortedText } from "utils/string";
+
+import { thumbsDispatchContextType } from "types/thumbs";
+import { thumbsDispatchContext } from "contexts/thumbs.context";
 
 type SquareRulingProps = {
   id: string;
@@ -16,7 +22,7 @@ type SquareRulingProps = {
   description: string;
   category: string;
   picture: string;
-  lastUpdated: string;
+  lastUpdated: number | Date;
   votes: {
     positive: number;
     negative: number;
@@ -29,6 +35,7 @@ type SquareRulingProps = {
 
 const SquareRuling = (props: SquareRulingProps): JSX.Element => {
   TimeAgo.addLocale(en);
+
   const timeAgo = new TimeAgo("en-US");
 
   const {
@@ -41,37 +48,24 @@ const SquareRuling = (props: SquareRulingProps): JSX.Element => {
     votes,
     updateThumbVotes,
   } = props;
+
   const [isThumbUpSelected, setIsThumUpSelected] = useState(false);
   const [isThumbDownSelected, setIsThumDownSelected] = useState(false);
   const [wasVoteSubmited, setWasVoteSubmited] = useState(false);
-  const [currentVotes, setVotes] = useState(votes);
-  const [currentLastUpdated, setLastUpdated] = useState(lastUpdated);
-  const lastUpdatedTimeAgo = timeAgo.format(new Date(currentLastUpdated));
-  const calculateQualificationBar = (
-    thumbUpVotes: number,
-    thumbDownVotes: number
-  ) => {
-    const totalVotes = thumbUpVotes + thumbDownVotes;
-    const thumbUpPercentaje = Math.round((thumbUpVotes / totalVotes) * 100);
-    const thumbDownPercentaje = 100 - thumbUpPercentaje;
-    return [thumbDownPercentaje, thumbUpPercentaje];
-  };
-  const [thumbDownPercentaje, thumbUpPercentaje] = calculateQualificationBar(
-    currentVotes.positive,
-    currentVotes.negative
-  );
+  const lastUpdatedTimeAgo = timeAgo.format(new Date(lastUpdated));
+
+  const dispatch = useContext<thumbsDispatchContextType>(thumbsDispatchContext);
+
+  const [thumbDownPercentaje, thumbUpPercentaje] =
+    calculateQualificationBarPercentages(votes.positive, votes.negative);
+
   const thumbDownStyle = {
     width: `${thumbDownPercentaje}%`,
   };
   const thumbUpStyle = {
     width: `${thumbUpPercentaje}%`,
   };
-  const getShortedText = (text: string, quantity: number) => {
-    if (text.length <= quantity) {
-      return text;
-    }
-    return text.substr(0, quantity - 1).trim() + "...";
-  };
+
   const handleSelectThumbUp = () => {
     setIsThumUpSelected(!isThumbUpSelected);
     setIsThumDownSelected(false);
@@ -92,8 +86,8 @@ const SquareRuling = (props: SquareRulingProps): JSX.Element => {
       setWasVoteSubmited(false);
     } else {
       let newVotes = {
-        positive: currentVotes.positive,
-        negative: currentVotes.negative,
+        positive: votes.positive,
+        negative: votes.negative,
       };
       if (isThumbUpSelected) {
         newVotes.positive = newVotes.positive + 1;
@@ -104,9 +98,8 @@ const SquareRuling = (props: SquareRulingProps): JSX.Element => {
       }
       const data = await updateThumbVotes(id, newVotes);
       if (data.message === "Thumb changed!") {
+        dispatch({ type: "UPDATE", id: id, votes: newVotes });
         setWasVoteSubmited(true);
-        setVotes({ ...newVotes });
-        setLastUpdated(new Date().toString());
       }
     }
   };
@@ -119,6 +112,7 @@ const SquareRuling = (props: SquareRulingProps): JSX.Element => {
     border: isThumbDownSelected ? "1px solid #ffffff" : "none",
     display: wasVoteSubmited ? "none" : "",
   };
+
   const isSubmitButtonDisabled = !(isThumbUpSelected || isThumbDownSelected);
 
   return (
