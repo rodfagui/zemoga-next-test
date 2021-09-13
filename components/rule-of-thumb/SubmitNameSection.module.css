@@ -1,60 +1,124 @@
-.SubmitNameSection {
-  background: white;
-  width: 1440px;
-  margin-top: 36px;
-  margin-bottom: 36px;
-  margin-left: auto;
-  margin-right: auto;
-  height: 108px;
+@media all and (min-width: 1440px) {
+  .SubmitNameSection {
+    background: white;
+    width: 1440px;
+    margin-top: 36px;
+    margin-bottom: 36px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 108px;
+  }
+  
+  .SubmitNameSection .bannerContainer {
+    position: relative;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: rgba(235, 235, 235, 0);
+  }
+  
+  .SubmitNameSection .bannerContainer .bannerImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1098px;
+    height: 108px;
+    object-fit: cover;
+  }
+  
+  .SubmitNameSection .bannerContainer .bannerLeft {
+    width: 100%;
+  }
+  
+  
+  .SubmitNameSection .bannerContainer .bannerLeft .bannerHeading {
+    position: relative;
+    color: rgba(70, 70, 70, 1);
+    text-align: left;
+    margin-left: 20px;
+    font-weight: normal;
+    font-size: 27px;
+    line-height: 32px;
+  }
+  
+  .SubmitNameSection .bannerContainer .bannerRight {
+    width: 50%;
+  }
+  
+  .SubmitNameSection .bannerContainer .bannerRight .bannerButton {
+    position: relative;
+    display: block;
+    width: 90%;
+    padding: 1rem 0;
+    border: 2px solid rgba(0, 0, 0, .6);
+    background: transparent;
+    color: rgba(51, 51, 51, 1);
+    font-size: 1.5rem;
+  }
 }
 
-.SubmitNameSection .bannerContainer {
-  position: relative;
-  height: 100%;
-  display: flex;
-  overflow: hidden;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem;
-  background-color: rgba(235, 235, 235, 0);
-}
-
-.SubmitNameSection .bannerContainer .bannerImage {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  object-fit: cover;
-  opacity: 0.8;
-  pointer-events: none;
-}
-
-.SubmitNameSection .bannerContainer .bannerLeft {
-  width: 100%;
-}
-
-
-.SubmitNameSection .bannerContainer .bannerLeft .bannerHeading {
-  position: relative;
-  color: rgba(70, 70, 70, 1);
-  text-align: left;
-  margin-left: 20px;
-  font-weight: normal;
-  font-size: 27px;
-  line-height: 32px;
-}
-
-.SubmitNameSection .bannerContainer .bannerRight {
-  width: 50%;
-}
-
-.SubmitNameSection .bannerContainer .bannerRight .bannerButton {
-  position: relative;
-  display: block;
-  width: 90%;
-  padding: 1rem 0;
-  border: 2px solid rgba(0, 0, 0, .6);
-  background: transparent;
-  color: rgba(51, 51, 51, 1);
-  font-size: 1.5rem;
+@media all and (min-width: 768px) and (max-width: 1439px) {
+  .SubmitNameSection {
+    background: white;
+    width: 768px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 108px;
+  }
+  
+  .SubmitNameSection .bannerContainer {
+    position: relative;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: rgba(235, 235, 235, 0);
+  }
+  
+  .SubmitNameSection .bannerContainer .bannerImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 900px;
+    height: 108px;
+    object-fit: cover;
+    overflow: hidden;
+  }
+  
+  .SubmitNameSection .bannerContainer .bannerLeft {
+    width: 100%;
+  }
+  
+  .SubmitNameSection .bannerContainer .bannerLeft .bannerHeading {
+    position: relative;
+    color: rgba(70, 70, 70, 1);
+    text-align: left;
+    margin-left: 20px;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 25.2px;
+  }
+  
+  .SubmitNameSection .bannerContainer .bannerRight {
+    width: 50%;
+  }
+  
+  .SubmitNameSection .bannerContainer .bannerRight .bannerButton {
+    position: relative;
+    display: block;
+    width: 90%;
+    padding: 1rem 0;
+    border: 2px solid rgba(0, 0, 0, .6);
+    background: transparent;
+    color: rgba(51, 51, 51, 1);
+    font-size: 21px;
+    line-height: 25.2px;
+  }
 }

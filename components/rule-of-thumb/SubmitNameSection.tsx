@@ -7,7 +7,7 @@ const SubmitNameSection = () => {
     <aside className={classes.SubmitNameSection}>
       <div className={`container ${classes.bannerContainer}`}>
         <div className={classes.bannerImage}>
-          <Image src={bannerImage} alt="bannerImage" />
+          <Image src={bannerImage} alt="bannerImage" layout="fill" />
         </div>
         <div className={classes.bannerLeft}>
           <h2 className={classes.bannerHeading}>Is there anyone else you would want us to add?</h2>

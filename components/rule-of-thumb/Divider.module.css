@@ -1,5 +1,17 @@
-.Divider {
-  border: 0 none;
-  border-bottom: 2px dotted rgba(70, 70, 70, 1);
-  margin: 1.5rem 0;
+
+
+@media all and (min-width: 1440px) {
+  .Divider {
+    border: 0 none;
+    border-bottom: 2px dotted rgba(70, 70, 70, 1);
+    margin: 1.5rem 0;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1439px) {
+  .Divider {
+    border: 0 none;
+    border-bottom: 2px dotted rgba(70, 70, 70, 1);
+    margin: 16px 0;
+  }
 }
