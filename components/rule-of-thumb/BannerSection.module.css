@@ -1,58 +1,123 @@
-.BannerSection {
-  background: white;
-  width: 1440px;
-  margin-top: 36px;
-  margin-bottom: 36px;
-  margin-left: auto;
-  margin-right: auto;
+
+
+@media all and (min-width: 1440px) {
+  .BannerSection {
+    background: white;
+    width: 1440px;
+    margin-top: 36px;
+    margin-bottom: 36px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .BannerSection .bannerContainer {
+    height: 88px;
+    background: #ebebeb;
+    display: flex;
+    color: #464646;
+  }
+  
+  .BannerSection .bannerContainer .speak {
+    height: 51px;
+    width: 174px;
+    margin: 19px 9px 18px 18px;
+    word-wrap: break-word;
+  }
+  
+  .BannerSection .bannerContainer .speak p {
+    margin: 0;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: -1.125px;
+  }
+  
+  .BannerSection .bannerContainer .speak span {
+    margin: 0;
+    display: block;
+    font-weight: bold;
+    font-size: 27px;
+    line-height: 32px;
+  }
+  
+  .BannerSection .bannerContainer .description {
+    height: 44px;
+    width: 853px;
+    margin: 22px 20px 22px 9px;
+    word-wrap: break-word;
+  }
+  
+  .BannerSection .bannerContainer .description p {
+    margin: 0;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: -0.75px;
+  }
+  
+  .BannerSection .bannerContainer .dismiss {
+    height: 18px;
+    width: 18px;
+    margin: 35px 18px 35px 17px;
+  }
 }
 
-.BannerSection .bannerContainer {
-  height: 88px;
-  background: #ebebeb;
-  display: flex;
-}
+@media all and (min-width: 768px) and (max-width: 1439px) {
+  .BannerSection {
+    background: white;
+    width: 768px;
+    margin-top: 28px;
+    margin-bottom: 28px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-.BannerSection .bannerContainer .speak {
-  height: 51px;
-  width: 174px;
-  margin: 19px 9px 18px 18px;
-  word-wrap: break-word;
-}
-
-.BannerSection .bannerContainer .speak p {
-  margin: 0;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 22px;
-  letter-spacing: -1.125px;
-}
-
-.BannerSection .bannerContainer .speak span {
-  margin: 0;
-  display: block;
-  font-weight: bold;
-  font-size: 27px;
-  line-height: 32px;
-}
-
-.BannerSection .bannerContainer .description {
-  height: 44px;
-  width: 853px;
-  margin: 22px 20px 22px 9px;
-  word-wrap: break-word;
-}
-
-.BannerSection .bannerContainer .description p {
-  margin: 0;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 22px;
-  letter-spacing: -0.75px;
-}
-
-.BannerSection .bannerContainer .dismiss {
-  height: 18px;
-  width: 18px;
-  margin: 35px 18px 35px 17px;
+  .BannerSection .bannerContainer {
+    height: 110px;
+    background: #ebebeb;
+    display: flex;
+    color: #464646;
+  }
+  
+  .BannerSection .bannerContainer .speak {
+    height: 51px;
+    width: 109px;
+    margin: 30px 29px 21px 14px;
+    word-wrap: break-word;
+  }
+  
+  .BannerSection .bannerContainer .speak p {
+    margin: 0;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16.8px;
+    letter-spacing: -1.13px;
+  }
+  
+  .BannerSection .bannerContainer .speak span {
+    margin: 0;
+    display: block;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 25.2px;
+  }
+  
+  .BannerSection .bannerContainer .description {
+    height: 87px;
+    width: 565px;
+    margin: 23px 14px 0 0;
+    word-wrap: break-word;
+  }
+  
+  .BannerSection .bannerContainer .description p {
+    margin: 0;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21.6px;
+    letter-spacing: -0.75px;
+  }
+  
+  .BannerSection .bannerContainer .dismiss {
+    display: none;
+  }
 }

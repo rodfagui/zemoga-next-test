@@ -1,53 +1,110 @@
-.ClosingCounterBar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 54px;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.4);
-  display: flex
+@media all and (min-width: 1440px) {
+  .ClosingCounterBar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 54px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    display: flex
+  }
+  
+  .ClosingCounterBar .closingIn {
+    width: 415px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: right;
+    text-transform: uppercase;
+  }
+  
+  .ClosingCounterBar .closingIn .text {
+    margin-top: 13px;
+    margin-bottom: 12px;
+    margin-right: 17.99px;
+  }
+  
+  .ClosingCounterBar .triangle {
+    width: 0;
+    margin-left: 19px;
+    border-style: solid;
+    border-width: 0 8px 8px 8px;
+    border-color: transparent transparent rgba(0, 0, 0, 0.4) transparent;
+    transform: rotate(90deg);
+  }
+  
+  .ClosingCounterBar .days {
+    margin-top: 5px;
+    margin-bottom: 6px;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 43px;
+    color: #464646;
+  }
+  
+  .ClosingCounterBar .days span {
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 43px;
+  }
 }
 
-.ClosingCounterBar .closingIn {
-  width: 415px;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  color: white;
-  font-weight: 300;
-  font-size: 24px;
-  line-height: 29px;
-  text-align: right;
-  text-transform: uppercase;
-}
+@media all and (min-width: 768px) and (max-width: 1439px) {
+  .ClosingCounterBar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 42px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    display: flex
+  }
 
-.ClosingCounterBar .closingIn .text {
-  margin-top: 13px;
-  margin-bottom: 12px;
-  margin-right: 17.99px;
-}
+  .ClosingCounterBar .closingIn {
+    width: 249.16px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16.8px;
+    text-align: right;
+    text-transform: uppercase;
+  }
 
-.ClosingCounterBar .triangle {
-  width: 0;
-  margin-left: 19px;
-  border-style: solid;
-  border-width: 0 8px 8px 8px;
-  border-color: transparent transparent rgba(0, 0, 0, 0.4) transparent;
-  transform: rotate(90deg);
-}
-
-.ClosingCounterBar .days {
-  margin-top: 5px;
-  margin-bottom: 6px;
-  font-weight: normal;
-  font-size: 36px;
-  line-height: 43px;
-  color: #464646;
-}
-
-.ClosingCounterBar .days span {
-  font-weight: 300;
-  font-size: 36px;
-  line-height: 43px;
+  .ClosingCounterBar .closingIn .text {
+    margin-top: 13px;
+    margin-bottom: 12px;
+    margin-right: 7.55px;
+  }
+  
+  .ClosingCounterBar .triangle {
+    width: 0;
+    margin-left: 15px;
+    border-style: solid;
+    border-width: 0 6px 6px 6px;
+    border-color: transparent transparent rgba(0, 0, 0, 0.4) transparent;
+    transform: rotate(90deg);
+  }
+  
+  .ClosingCounterBar .days {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21.6px;
+    color: #464646;
+    text-align: left;
+  }
+  
+  .ClosingCounterBar .days span {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21.6px;
+  }
 }
 
 
