@@ -82,20 +82,17 @@
   }
 
   .HeaderSection .mask .navigation .navbar a {
-    font-size: 1rem;
-    line-height: 2rem;
-    margin-right: 10px;
+    display: none
   }
 
   .HeaderSection .mask .navigation .navbar .hamburguerMenu {
-    display: none;
+    position: relative;
+    width: 25px;
+    height: 25px;
   }
 
   .HeaderSection .mask .navigation .search {
-    position: relative;
-    width: 28px;
-    height: 28px;
-    margin-left: 10px;
+    display: none;
   }
 }
 
