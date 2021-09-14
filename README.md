@@ -14,6 +14,12 @@ Install the required dependencies for the project to work properly:
 yarn install
 ```
 
+I added cypress to the project, to add some end-to-end tests. To run cypress tests:
+
+```bash
+yarn cypress
+```
+
 We use MongoDB to persist the result of the votes for each celebrity. Add the .env file sent to your mail to the root of the project. This is used to set the connection to a MongoDB Atlas database.
 
 Then, run the development server:
