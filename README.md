@@ -2,15 +2,25 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First, clone the project:
 
 ```bash
-npm run dev
-# or
+git clone https://github.com/rodfagui/zemoga-next-test.git
+```
+
+Install the required dependencies for the project to work properly:
+
+```bash
+yarn install
+```
+
+Then, run the development server:
+
+```bash
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the results of the UI test.
 
 You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 

@@ -132,7 +132,7 @@ const SquareRuling = (props: SquareRulingProps): JSX.Element => {
           />
         </div>
         <div className={classes.description}>
-          <h2>{name}</h2>
+          <h2>{getShortedText(name, 16)}</h2>
           <p>{getShortedText(description, 75)}</p>
         </div>
         <div className={classes.date}>
