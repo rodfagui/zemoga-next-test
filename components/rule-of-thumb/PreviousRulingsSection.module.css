@@ -86,7 +86,7 @@
   .PreviousRulingsSection {
     background: white;
     margin-top: 28px;
-    width: 768px;
+    width: 375px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -101,25 +101,18 @@
   .PreviousRulingsSection .heading h1 {
     font-weight: 300;
     font-size: 24px;
-    line-height: 28.8px;
+    line-height: 29px;
     margin: 0;
   }
 
   .PreviousRulingsSection .heading select {
-    font-weight: normal;
-    font-size: 10.5px;
-    line-height: 100%;
-    width: 131px;
-    height: 28px;
-    background: white;
-    text-align: center;
+    display: none;
   }
 
   .PreviousRulingsSection .rulings {
     margin-top: 28px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    overflow-x: auto;
   }
 }
