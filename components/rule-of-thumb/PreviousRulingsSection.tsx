@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import classes from "./PreviousRulingsSection.module.css";
 import LargeRuling from "./LargeRuling";
 import SquareRuling from "./SquareRuling";
@@ -53,6 +53,17 @@ const PreviousRulingsSection = (props: Props) => {
     setShowOptions(false);
     setSelectedRenderOption(showOption);
   };
+
+  useEffect(function onFirstMount() {
+    function onResize() {
+      if (window.innerWidth < 768) {
+        setSelectedRenderOption("grid");
+      }
+    }
+    if (typeof window !== "undefined") {
+      window.addEventListener('resize', onResize);
+    }
+  }, []);
 
   return (
     <main className={classes.PreviousRulingsSection}>
