@@ -132,7 +132,7 @@
   }
 }
 
-@media all and (min-width: 375px) and (max-width: 768px) {
+@media all and (min-width: 250px) and (max-width: 768px) {
   .Footer {
     width: 375px;
     margin-top: 35.5px;

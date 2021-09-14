@@ -167,7 +167,7 @@
   }
 }
 
-@media all and (min-width: 375px) and (max-width: 768px) {
+@media all and (min-width: 250px) and (max-width: 768px) {
   .MainPanel {
     left: 12px;
     top: 66px;

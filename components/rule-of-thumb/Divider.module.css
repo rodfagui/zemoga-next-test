@@ -14,7 +14,7 @@
   }
 }
 
-@media all and (min-width: 375px) and (max-width: 768px) {
+@media all and (min-width: 250px) and (max-width: 768px) {
   .Divider {
     border: 0 none;
     border-bottom: 2px dotted rgba(70, 70, 70, 1);

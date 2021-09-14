@@ -107,7 +107,7 @@
   }
 }
 
-@media all and (min-width: 375px) and (max-width: 768px) {
+@media all and (min-width: 250px) and (max-width: 768px) {
   .ClosingCounterBar {
     position: absolute;
     bottom: 0;
