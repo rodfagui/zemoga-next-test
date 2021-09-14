@@ -125,18 +125,19 @@
 @media all and (min-width: 375px) and (max-width: 768px) {
   .SubmitNameSection {
     background: white;
-    width: 768px;
+    width: 375px;
     margin-top: 12px;
     margin-bottom: 12px;
     margin-left: auto;
     margin-right: auto;
-    height: 108px;
+    height: 144px;
   }
 
   .SubmitNameSection .bannerContainer {
     position: relative;
     height: 100%;
     display: flex;
+    flex-direction: column;
     overflow: hidden;
     align-items: center;
     justify-content: space-between;
@@ -148,39 +149,44 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 900px;
-    height: 108px;
+    width: 1400px;
+    height: 144px;
     object-fit: cover;
     overflow: hidden;
   }
 
   .SubmitNameSection .bannerContainer .bannerLeft {
-    width: 100%;
+    width: 312px;
+    height: 58px;
   }
 
   .SubmitNameSection .bannerContainer .bannerLeft .bannerHeading {
     position: relative;
     color: rgba(70, 70, 70, 1);
     text-align: left;
-    margin-left: 20px;
+    margin: 0;
     font-weight: normal;
-    font-size: 21px;
-    line-height: 25.2px;
+    font-size: 24px;
+    line-height: 28.8px;
+    text-align: center;
   }
 
   .SubmitNameSection .bannerContainer .bannerRight {
-    width: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .SubmitNameSection .bannerContainer .bannerRight .bannerButton {
     position: relative;
     display: block;
-    width: 90%;
+    width: 279px;
+    height: 48px;
     padding: 1rem 0;
     border: 2px solid rgba(0, 0, 0, 0.6);
     background: transparent;
     color: rgba(51, 51, 51, 1);
     font-size: 21px;
-    line-height: 25.2px;
+    line-height: 10px;
   }
 }
