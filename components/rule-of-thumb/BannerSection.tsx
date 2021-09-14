@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const BannerSection = () => {
   return (
-    <aside className={classes.BannerSection}>
+    <aside className={classes.BannerSection} role="doc-tip" aria-label="Speak Out">
       <div className={`container ${classes.bannerContainer}`}>
         <div className={classes.speak}>
           <p>
@@ -18,7 +18,7 @@ const BannerSection = () => {
             share your opinion, we analyze and put the data in a public report.
           </p>
         </div>
-        <div className={classes.dismiss}>
+        <div className={classes.dismiss} aria-label="close">
           <Image src={closeImage} alt="closeImage"/>
         </div>
       </div>

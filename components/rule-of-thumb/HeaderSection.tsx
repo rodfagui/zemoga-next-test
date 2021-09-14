@@ -13,7 +13,7 @@ const HeaderSection = () => {
         <div className={`container ${classes.maskContainer}`}>
           <div className={classes.logo} role="heading" aria-level={1}>Rule of thumb.</div>
           <div className={classes.navigation}>
-            <nav className={classes.navbar}>
+            <nav className={classes.navbar} role="navigation">
               <div className={classes.hamburguerMenu}>
                 <Image src={hamburguerImage} alt="hamburguerImage" layout="fill"/>
               </div>

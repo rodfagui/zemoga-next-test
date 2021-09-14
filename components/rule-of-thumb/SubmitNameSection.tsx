@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const SubmitNameSection = () => {
   return (
-    <aside className={classes.SubmitNameSection}>
+    <aside className={classes.SubmitNameSection} role="doc-tip" aria-label="Submit a name">
       <div className={`container ${classes.bannerContainer}`}>
         <div className={classes.bannerImage}>
           <Image src={bannerImage} alt="bannerImage" layout="fill" />
