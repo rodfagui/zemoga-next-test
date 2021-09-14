@@ -11,7 +11,7 @@ const HeaderSection = () => {
     <header className={classes.HeaderSection}>
       <div className={classes.mask}>
         <div className={`container ${classes.maskContainer}`}>
-          <div className={classes.logo}>Rule of thumb.</div>
+          <div className={classes.logo} role="heading" aria-level={1}>Rule of thumb.</div>
           <div className={classes.navigation}>
             <nav className={classes.navbar}>
               <div className={classes.hamburguerMenu}>
