@@ -16,6 +16,7 @@ type Props = {
 const PreviousRulingsSection = (props: Props) => {
   const { thumbs, updateThumbVotes } = props;
   const [selectedRenderOption, setSelectedRenderOption] = useState("grid");
+  const [showOptions, setShowOptions] = useState(false);
   const renderedList =
     selectedRenderOption === "list"
       ? thumbs.map((thumb) => (
@@ -44,19 +45,43 @@ const PreviousRulingsSection = (props: Props) => {
             updateThumbVotes={updateThumbVotes}
           />
         ));
+  const visibilityOption = showOptions ? "visible" : "hidden";
+  const openSelectOptions = () => {
+    setShowOptions(!showOptions);
+  };
+  const handleSelectOptions = (showOption: string) => {
+    setShowOptions(false);
+    setSelectedRenderOption(showOption);
+  };
+
   return (
     <main className={classes.PreviousRulingsSection}>
       <div className="container">
         <div className={classes.heading}>
           <h1>Previous Rulings</h1>
-          <select
-            className="select"
-            value={selectedRenderOption}
-            onChange={(evt) => setSelectedRenderOption(evt.target.value)}
-          >
-            <option value="list">List</option>
-            <option value="grid">Grid</option>
-          </select>
+          <div className={classes.select}>
+            <div className={classes.button} onClick={openSelectOptions}>
+              <span>{selectedRenderOption}</span>
+              <span className={classes.arrowCharacter}>&#9660;</span>
+            </div>
+            <div
+              className={classes.options}
+              style={{ visibility: visibilityOption }}
+            >
+              <div
+                className={classes.option}
+                onClick={() => handleSelectOptions("list")}
+              >
+                List
+              </div>
+              <div
+                className={classes.option}
+                onClick={() => handleSelectOptions("grid")}
+              >
+                Grid
+              </div>
+            </div>
+          </div>
         </div>
         <div className={classes.rulings}>{renderedList}</div>
       </div>

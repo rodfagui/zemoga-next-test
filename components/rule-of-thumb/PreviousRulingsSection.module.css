@@ -21,14 +21,47 @@
     margin: 0;
   }
 
-  .PreviousRulingsSection .heading select {
+  .PreviousRulingsSection .heading .select {
     font-weight: normal;
     font-size: 13.5px;
     line-height: 100%;
     width: 173px;
     height: 36px;
+    z-index: 15;
+  }
+
+  .PreviousRulingsSection .heading .select .button {
+    position: relative;
+    width: 173px;
+    height: 36px;
     background: white;
     text-align: center;
+    font-size: 13.5px;
+    border: 1px solid black;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .PreviousRulingsSection .heading .select .arrowCharacter {
+    position: absolute;
+    right: 10px;
+    font-size: 10px;
+  }
+
+  .PreviousRulingsSection .heading .select .option {
+    width: 173px;
+    height: 36px;
+    background: white;
+    text-align: center;
+    font-size: 13.5px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
   }
 
   .PreviousRulingsSection .rulings {
@@ -63,14 +96,47 @@
     margin: 0;
   }
 
-  .PreviousRulingsSection .heading select {
+  .PreviousRulingsSection .heading .select {
     font-weight: normal;
     font-size: 10.5px;
     line-height: 100%;
     width: 131px;
     height: 28px;
+    z-index: 15;
+  }
+
+  .PreviousRulingsSection .heading .select .button {
+    position: relative;
+    width: 131px;
+    height: 28px;
     background: white;
     text-align: center;
+    font-size: 10.5px;
+    border: 1px solid black;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .PreviousRulingsSection .heading .select .arrowCharacter {
+    position: absolute;
+    right: 8px;
+    font-size: 8px;
+  }
+
+  .PreviousRulingsSection .heading .select .option {
+    width: 131px;
+    height: 28px;
+    background: white;
+    text-align: center;
+    font-size: 10.5px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
   }
 
   .PreviousRulingsSection .rulings {
@@ -105,7 +171,7 @@
     margin: 0;
   }
 
-  .PreviousRulingsSection .heading select {
+  .PreviousRulingsSection .heading .select {
     display: none;
   }
 
